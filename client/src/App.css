@@ -1,0 +1,284 @@
+html,
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+  color: #4c99f0;
+}
+
+.navbar {
+  position: sticky;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #fff;
+}
+.navbar-nav > li:last-child {
+  padding: 0 10px;
+  background-color: #4c99f0;
+  border-radius: 10px;
+}
+.nav-link{
+  font-weight: 700;
+}
+
+
+.ide-ui {
+  display: flex;
+}
+
+.js-ide-main {
+  display: flex;
+  gap: 6px;
+  width: 99.9%;
+}
+.js-ide-input {
+  width: 70%;
+}
+.js-ide-output {
+  width: 30%;
+  border: 1px dashed;
+  padding: 0 10px;
+}
+.ide-output-top {
+  border: 0;
+  background-color: black;
+  color: white;
+  padding: 6px;
+  border-radius: 20px;
+}
+
+pre {
+  padding: 0 10px;
+  font-size: 13px;
+}
+.questions-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  width: 90%;
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.questions-main > button {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  padding: 5px;
+  border: 0;
+  border-radius: 20px;
+  width: 30%;
+}
+
+.ide-python {
+  display: flex;
+  gap: 6px;
+}
+.ide-python-editor {
+  width: 70%;
+}
+.ide-python-output {
+  width: 30%;
+  border: 1px dashed;
+}
+
+.wrap {
+  padding: 7px 0;
+  background: #fff;
+  color: #000 !important;
+  height: 40px;
+  z-index: 999;
+}
+.social-media {
+  margin-top: -1.5rem;
+}
+.social-media a {
+  border-right: solid;
+  padding-left: 10px;
+  border-width: 1px;
+  color: #4c99f0;
+}
+
+.social-media a:hover {
+  color: #17304c;
+  text-decoration: none;
+}
+
+.wrap p {
+  font-size: 13px;
+}
+.wrap .phone {
+  font-size: 13px;
+}
+.wrap .phone a {
+  font-size: 16px;
+}
+
+.wrap .phone .mailus {
+  font-size: 13px;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #1B252D;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 1rem;
+}
+#footer h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+#footer p {
+  font-size: 15;
+  font-style: italic;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+#footer .social-links {
+  margin: 0 0 40px 0;
+}
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #05ABE9;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+#footer .social-links a:hover {
+  background: #bd5102;
+  color: #fff;
+  text-decoration: none;
+}
+#footer .copyright {
+  margin: 0 0 5px 0;
+}
+#footer .credits {
+  font-size: 13px;
+}
+
+#footer ul {
+  list-style-type: square;
+}
+
+#footer .sociallogo{
+  font-size: 35px;
+  display: inline-block;
+  text-align: center;
+}
+
+#footer .sociallogo a:hover{
+  color: #fff;
+}
+
+.codexio-footer {
+  padding-top: 10px;
+  margin-bottom: -2em;
+  }
+
+@media screen and (max-width: 991px) {
+  .codexio-footer {
+    text-align: center!important;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .wrap {
+    display: none;
+  }
+  .ide-ui {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ide-question {
+    padding: 10px;
+    width: 100%;
+    height: 150px;
+    position: relative;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid;
+    gap: 8px;
+  }
+  .input {
+    width: 100%;
+  }
+  .ide-question > button {
+    font-size: 30px;
+    background-color: rgb(0, 0, 0);
+    border: 0;
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 75%;
+  }
+
+  .output {
+    border: 3px dashed rgb(8, 8, 8);
+    width: 100%;
+    height: 150px;
+    margin: 5px 0;
+  }
+  .output > div {
+    overflow: scroll;
+    height: 100px;
+  }
+  .ide-python {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ide-python-editor {
+    width: 100%;
+  }
+  .ide-python-output {
+    width: 100%;
+    border: 1px dashed;
+    height: 200px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Disable AOS delay on mobile
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
