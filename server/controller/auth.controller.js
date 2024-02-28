@@ -58,7 +58,7 @@ const ForgetPasswordController = async (req, res) => {
     const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, {
       expiresIn: "5m",
     });
-    const link = `http://127.0.0.1:8081/v1/reset-password/${oldUser._id}/${token}`;
+    const link = `https://integrated-development-environment.onrender.com/v1/reset-password/${oldUser._id}/${token}`;
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
