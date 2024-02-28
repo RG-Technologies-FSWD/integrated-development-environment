@@ -8,6 +8,7 @@ import Signup from "../pages/auth/Signup";
 import Login from "../pages/auth/Login";
 
 const Allroutes = () => {
+ 
   return (
     <Routes>
       <Route path="/" element={<Home />} />

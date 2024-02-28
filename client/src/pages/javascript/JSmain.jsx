@@ -1,6 +1,7 @@
 import { useState } from "react";
 import QuestionList from "../utils/Questionlist";
 import IDEjavascript from "./IDEjavascript";
+import { useNavigate } from "react-router-dom";
 
 const q = [
   {
@@ -36,6 +37,13 @@ const q = [
 ];
 
 function JSmain() {
+  const token = localStorage.getItem("rg-ide-token");
+
+  const navigate = useNavigate();
+  if (!token) {
+    navigate("/login");
+  }
+
   const [code, setCode] = useState("");
   const [output, setOutput] = useState("");
   const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(null);
@@ -110,7 +118,9 @@ function JSmain() {
     <>
       {selectedQuestionIndex === null ? (
         <div>
-          <h4 style={{textAlign:"center",padding:"10px"}}>JavaScript Problem Statements</h4>
+          <h4 style={{ textAlign: "center", padding: "10px" }}>
+            JavaScript Problem Statements
+          </h4>
           <QuestionList questions={q} onSolveClick={handleSolveClick} />
         </div>
       ) : (

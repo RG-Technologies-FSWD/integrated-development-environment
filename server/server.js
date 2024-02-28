@@ -1,9 +1,21 @@
-const express = require('express')
-const app = express()
+const express = require("express");
+// const cookieParser = require("cookie-parser");
+const cors = require("cors")
+const db = require("./utils/db.js");
+const AuthRoute = require("./router/auth.route.js");
 
-app.use(express.urlencoded({ extended: false }))
-app.use(express.json())
+const PORT = 8081;
+const app = express();
+app.use(cors())
 
-app.get('/', (req, res) => res.send('hello'))
+app.set("view engine", "ejs");
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+// app.use(cookieParser());
 
-app.listen(8080, () => {console.log('server started on 8081')})
+app.use("/v1", AuthRoute);
+
+app.listen(PORT, () => {
+  db();
+  console.log(`http://127.0.0.1:${PORT}/v1`);
+});

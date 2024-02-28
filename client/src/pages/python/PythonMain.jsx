@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import QuestionList from "../utils/Questionlist";
 import IDEpython from "./IDEpython";
+import { useNavigate } from "react-router-dom";
 
 const q = [
   {
@@ -36,6 +37,12 @@ const q = [
 ];
 
 const PythonMain = () => {
+  const token = localStorage.getItem("rg-ide-token");
+
+  const navigate = useNavigate();
+  if (!token) {
+    navigate("/login");
+  }
   const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(null);
   const handleSolveClick = (index) => {
     setSelectedQuestionIndex(index);
