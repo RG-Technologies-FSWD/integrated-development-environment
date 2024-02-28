@@ -58,9 +58,7 @@ const IDEpython = ({ id, question, input, outPut, onBackClick }) => {
             width="100%"
             height="400px"
           />
-          <button className="btn btn-primary w-100" onClick={executeCode}>
-            Run Code
-          </button>
+          <button disabled className="btn btn-primary w-100 mt-1">Save Code</button>
         </div>
         <div className="ide-python-output">
           <div
@@ -72,13 +70,23 @@ const IDEpython = ({ id, question, input, outPut, onBackClick }) => {
               padding: "8px",
             }}
           >
-            <h4 style={{ textAlign: "center" }}>PYTHON OUTPUT</h4>
+            <div style={{display:"flex",alignItems:"center"}}>
+            <img style={{width:"50px"}} src="https://qph.cf2.quoracdn.net/main-qimg-dca3cd734f5eb8c4854f00af58e534ff" alt="py" />
+            <h4 style={{ textAlign: "center" }}>OUTPUT</h4>
+            </div>
+            <div style={{display:"flex",alignItems:"center",gap:"5px"}}>
+
+            <button className="btn btn-success w-10" onClick={executeCode}>
+            Run Code
+          </button>
+          {" "}
             <button
               className="ide-output-top"
               onClick={() => setOutput(() => "")}
             >
               Clear
             </button>
+            </div>
           </div>
           <pre>{output}</pre>
         </div>
