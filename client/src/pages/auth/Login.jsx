@@ -33,6 +33,9 @@ const Login = () => {
           email: "",
           password: "",
         });
+        setTimeout(() => {
+          window.location.href="/javascript"
+        }, 600);
       }
     } catch (error) {
       setLoading(false);
@@ -68,7 +71,7 @@ const Login = () => {
           <u>{restmail}</u>
         </p>
       )}
-      <form>
+      <form className="auth-forms">
         <div className="mb-3">
           <label htmlFor="username" className="form-label">
             User Email

@@ -30,8 +30,8 @@ const IDEjavascript = ({
           </u>
         </summary>
         <br />
-        <div>
-          <p>
+        <div style={{marginTop:"-15px",paddingLeft:"40px"}}>
+          <p style={{marginBottom:"-2px"}}>
             Input : <b>{input}</b>
           </p>
           <p>

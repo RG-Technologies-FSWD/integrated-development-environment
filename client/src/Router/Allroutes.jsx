@@ -6,6 +6,7 @@ import SQLmain from "../pages/sql/SQLmain";
 import JSmain from "../pages/javascript/JSmain";
 import Signup from "../pages/auth/Signup";
 import Login from "../pages/auth/Login";
+import User from "../pages/user/User";
 
 const Allroutes = () => {
  
@@ -17,6 +18,7 @@ const Allroutes = () => {
       <Route path="/javascript" element={<JSmain />} />
       <Route path="/python" element={<PythonMain />} />
       <Route path="/sql" element={<SQLmain />} />
+      <Route path="/user/:id" element={<User/>}></Route>
       <Route path="*" element={<Home />} />
     </Routes>
   );

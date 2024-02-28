@@ -48,7 +48,7 @@ const Signup = () => {
   return (
     <div className="container w-50">
       <h2 style={{ textAlign: "center" }}>Sign up</h2>
-      <form>
+      <form className="auth-forms">
         <div className="mb-3">
           <label htmlFor="username" className="form-label">
             User Name

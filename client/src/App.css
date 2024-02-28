@@ -127,6 +127,14 @@ pre {
 .wrap .phone .mailus {
   font-size: 13px;
 }
+  /* auth forms */
+  .auth-forms{
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 20px;
+  }
+
+
 
 
 /*--------------------------------------------------------------

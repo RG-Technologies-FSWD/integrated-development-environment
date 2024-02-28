@@ -35,8 +35,8 @@ const IDEpython = ({ id, question, input, outPut, onBackClick }) => {
           </u>
         </summary>
         <br />
-        <div>
-          <p>
+        <div style={{marginTop:"-15px",paddingLeft:"40px"}}>
+          <p style={{marginBottom:"-2px"}}>
             <b>Input : </b>
             {input}
           </p>

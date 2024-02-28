@@ -4,7 +4,6 @@ const User = require("../models/auth.model.js");
 const nodemailer = require("nodemailer");
 const ejs = require("ejs");
 
-
 const signup = async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -35,7 +34,7 @@ const login = async (req, res) => {
       return res.status(401).json({ error: "Invalid credentials" });
     }
     const token = jwt.sign(
-      { userId: user._id, name: user.username },
+      { userId: user._id, name: user.username, email: user.email },
       "RGTECH_IDE_6779",
       {
         expiresIn: "7days",

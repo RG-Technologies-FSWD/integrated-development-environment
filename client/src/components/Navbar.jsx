@@ -4,7 +4,7 @@ import { jwtDecode } from "jwt-decode";
 const Navbar = () => {
   const token = localStorage.getItem("rg-ide-token");
   const decode = token ? jwtDecode(token) : null;
-  console.log(decode);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -59,6 +59,9 @@ const Navbar = () => {
                 SQL
               </a>
           </li>*/}
+
+              {/* ------------------------------- */}
+
               {decode ? (
                 <li className="nav-item">
                   <a
@@ -80,6 +83,8 @@ const Navbar = () => {
                   </a>
                 </li>
               )}
+
+              {/* ------------------------------- */}
             </ul>
           </div>
         </div>
