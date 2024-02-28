@@ -102,6 +102,7 @@ const Login = () => {
             className="btn btn-outline-secondary"
             type="button"
             onClick={() => setShowPassword(!showPassword)}
+
           >
             {showPassword ? "Hide" : "Show"}
           </button>
@@ -122,6 +123,7 @@ const Login = () => {
           type="button"
           className="btn btn-info mb-3 w-100"
           onClick={handleLogin}
+          disabled={loading}
         >
          { loading ? "Checking...":"Login"}
         </button>
