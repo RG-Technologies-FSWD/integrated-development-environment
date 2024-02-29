@@ -64,7 +64,7 @@ const Login = () => {
   };
 
   return (
-    <div className="container w-50">
+    <div className="auth-form container">
       <h2 style={{ textAlign: "center" }}>Login</h2>
       {restmail && (
         <p style={{ color: "green", fontSize: "17px" }}>

@@ -1,5 +1,6 @@
-import React from "react";
+import React from 'react'
 import MonacoEditor from "react-monaco-editor";
+
 
 const IDEjavascript = ({
   id,
@@ -13,11 +14,16 @@ const IDEjavascript = ({
   onBackClick,
   setOutput,
 }) => {
+
   const options = {
     selectOnLineNumbers: true,
     fontSize: 14,
     automaticLayout: true,
+    scrollbar: {
+      alwaysConsumeMouseWheel: false,
+    },
   };
+  
 
   return (
     <>
@@ -40,16 +46,15 @@ const IDEjavascript = ({
         </div>
       </details>
       <div className="js-ide-main">
-        <div className="js-ide-input">
+        <div className="js-ide-input" >
           <MonacoEditor
             width="100%"
-            height={400}
+            height={"400px"}
             language="javascript"
             theme="hc-black"
             value={code}
             options={options}
             onChange={onCodeChange}
-            className="ide"
           />
           <button disabled className="btn btn-primary w-100 mt-1">Save Code</button>
         </div>
@@ -91,7 +96,7 @@ const IDEjavascript = ({
             </div>
           </div>
           <div>
-            <pre>{output}</pre>
+            {output && <pre>{output}{`\n`}[AT : {new Date().toLocaleTimeString()}]</pre>}
           </div>
         </div>
       </div>

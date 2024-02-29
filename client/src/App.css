@@ -9,6 +9,10 @@ a{
   color: #4c99f0;
 }
 
+.auth-form{
+  width: 50%;
+}
+
 .navbar {
   position: sticky;
   z-index: 999;
@@ -296,6 +300,7 @@ pre {
     height: 200px;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Disable AOS delay on mobile

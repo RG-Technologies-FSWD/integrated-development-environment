@@ -46,7 +46,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="container w-50">
+    <div className="auth-form container-fluid">
       <h2 style={{ textAlign: "center" }}>Sign up</h2>
       <form className="auth-forms">
         <div className="mb-3">

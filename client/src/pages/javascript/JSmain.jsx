@@ -55,7 +55,6 @@ function JSmain() {
   };
 
   const handleRunCode = async () => {
-    const time = new Date();
     try {
       const containsFunctionKeyword = /(\bfunction\b)/.test(code);
       let result;
@@ -78,28 +77,19 @@ function JSmain() {
       console.log = originalConsoleLog;
 
       if (capturedLogs && capturedLogs.length > 0) {
-        setOutput(
-          `=> Output : ${capturedLogs.join(
-            "\n"
-          )}   \n[Time : ${time.toLocaleTimeString()}]`
-        );
+        setOutput(`=> Output : ${capturedLogs.join("\n")}`);
       } else if (typeof result !== "undefined" && result !== null) {
-        setOutput(
-          `=> Output : ${result}   \n[Time : ${time.toLocaleTimeString()}]`
-        );
+        setOutput(`=> Output : ${result}`);
       } else {
         setOutput(
           <span style={{ color: "orange" }}>
             Code execution result is undefined or null.
-            {`\nAT : ${time.toLocaleTimeString()}`}
           </span>
         );
       }
     } catch (error) {
       setOutput(() => (
-        <span style={{ color: "red" }}>
-          Error: {error.message} {`\n`}[{time.toLocaleTimeString()}]
-        </span>
+        <span style={{ color: "red" }}>Error: {error.message}m</span>
       ));
     }
   };

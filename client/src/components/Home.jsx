@@ -24,7 +24,7 @@ const Home = () => {
                   <br />{" "}
                 </p>
                 <a href="/python">
-                  <button type="button" class="btn btn-info">
+                  <button type="button" class="btn btn-info w-100">
                     Go To Python IDE
                   </button>
                 </a>
@@ -38,12 +38,12 @@ const Home = () => {
               <div className="card-body">
                 <h5 className="card-title">JavaScript IDE</h5>
                 <p className="card-text">
-                  Practice JavaScript coding with our IDE. Write and run
+                  Practice JS coding with our IDE. Write and run
                   JavaScript code snippets <b>NOTE :</b>{" "}
                   <i>We are currently working on handling async functions</i>
                 </p>
                 <a href="/javascript">
-                  <button type="button" class="btn btn-warning">
+                  <button type="button" class="btn btn-warning w-100">
                     Go To JavaScript IDE
                   </button>
                 </a>
