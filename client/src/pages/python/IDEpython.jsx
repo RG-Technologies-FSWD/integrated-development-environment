@@ -26,7 +26,7 @@ const IDEpython = ({ id, question, input, outPut, onBackClick }) => {
 
   return (
     <>
-      <DisplayQuestions props={{ id, question, input, outPut, onBackClick }} />
+      {/* <DisplayQuestions props={{ id, question, input, outPut, onBackClick }} /> */}
       <div className="ide-python">
         <div className="ide-python-editor">
           <AceEditor
@@ -38,9 +38,6 @@ const IDEpython = ({ id, question, input, outPut, onBackClick }) => {
             width="100%"
             height="400px"
           />
-          <button disabled className="btn btn-primary w-100 mt-1">
-            Save Code
-          </button>
         </div>
         <DisplayOutput props={{ executeCode, setOutput, output }} />
       </div>

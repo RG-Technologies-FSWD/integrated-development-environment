@@ -3,38 +3,38 @@ import QuestionList from "../utils/Questionlist";
 import IDEjavascript from "./IDEjavascript";
 import { useNavigate } from "react-router-dom";
 
-const q = [
-  {
-    id: 1,
-    question: "Check if a given number is a prime number",
-    input: "7",
-    output: "Prime",
-  },
-  {
-    id: 2,
-    question: "Calculate the square of a given number",
-    input: "4",
-    output: "16",
-  },
-  {
-    id: 3,
-    question: "Check if a string is a palindrome",
-    input: "'level'",
-    output: "Palindrome",
-  },
-  {
-    id: 4,
-    question: "Find the sum of all numbers from 1 to a given number",
-    input: "5",
-    output: "15",
-  },
-  {
-    id: 5,
-    question: "Calculate the factorial of a given number",
-    input: "3",
-    output: "6",
-  },
-];
+// const q = [
+//   {
+//     id: 1,
+//     question: "Check if a given number is a prime number",
+//     input: "7",
+//     output: "Prime",
+//   },
+//   {
+//     id: 2,
+//     question: "Calculate the square of a given number",
+//     input: "4",
+//     output: "16",
+//   },
+//   {
+//     id: 3,
+//     question: "Check if a string is a palindrome",
+//     input: "'level'",
+//     output: "Palindrome",
+//   },
+//   {
+//     id: 4,
+//     question: "Find the sum of all numbers from 1 to a given number",
+//     input: "5",
+//     output: "15",
+//   },
+//   {
+//     id: 5,
+//     question: "Calculate the factorial of a given number",
+//     input: "3",
+//     output: "6",
+//   },
+// ];
 
 function JSmain() {
   const token = localStorage.getItem("rg-ide-token");
@@ -48,7 +48,7 @@ function JSmain() {
 
   const [code, setCode] = useState("");
   const [output, setOutput] = useState("");
-  const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(null);
+  //const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(null);
 
   const handleCodeChange = (newCode) => {
     setCode(newCode);
@@ -94,33 +94,34 @@ function JSmain() {
     }
   };
 
-  const handleSolveClick = (index) => {
-    setSelectedQuestionIndex(index);
-    setCode("");
-    setOutput("");
-  };
+  // const handleSolveClick = (index) => {
+  //   setSelectedQuestionIndex(index);
+  //   setCode("");
+  //   setOutput("");
+  // };
 
   const handleBackClick = () => {
-    setSelectedQuestionIndex(null);
+    // setSelectedQuestionIndex(null);
     setCode("");
     setOutput("");
   };
 
   return (
     <>
-      {selectedQuestionIndex === null ? (
+      {/* {selectedQuestionIndex === null ? (
         <div>
           <h4 style={{ textAlign: "center", padding: "10px" }}>
             JavaScript Problem Statements
           </h4>
           <QuestionList questions={q} onSolveClick={handleSolveClick} />
         </div>
-      ) : (
+      ) : */}
+      
         <IDEjavascript
-          id={q[selectedQuestionIndex].id}
-          question={q[selectedQuestionIndex].question}
-          input={q[selectedQuestionIndex].input}
-          outPut={q[selectedQuestionIndex].output}
+          // id={q[selectedQuestionIndex].id}
+          // question={q[selectedQuestionIndex].question}
+          // input={q[selectedQuestionIndex].input}
+          // outPut={q[selectedQuestionIndex].output}
           setOutput={setOutput}
           code={code}
           output={output}
@@ -128,7 +129,7 @@ function JSmain() {
           onRunCode={handleRunCode}
           onBackClick={handleBackClick}
         />
-      )}
+      {/* )} */}
     </>
   );
 }

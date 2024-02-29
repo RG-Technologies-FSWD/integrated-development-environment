@@ -24,7 +24,7 @@ const IDEjavascript = ({
 
   return (
     <>
-      <DisplayQuestions props={{ id, question, input, outPut, onBackClick }} />
+      {/* <DisplayQuestions props={{ id, question, input, outPut, onBackClick }} /> */}
       <div className="js-ide-main">
         <div className="js-ide-input">
           <MonacoEditor
@@ -36,9 +36,6 @@ const IDEjavascript = ({
             options={options}
             onChange={onCodeChange}
           />
-          <button disabled className="btn btn-primary w-100 mt-1">
-            Save Code
-          </button>
         </div>
         <DisplayOutput props={{ onRunCode, setOutput, output }} />
       </div>
