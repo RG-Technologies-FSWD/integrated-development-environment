@@ -116,11 +116,11 @@ export function DisplayOutput({props}) {
           </button>
         </div>
       </div>
-      <div>
+      <div style={{overflow:"auto",height:"400px"}}>
         {output && (
-          <pre>
+          <p className="pre"> 
             {output}
-          </pre>
+          </p>
         )}
       </div>
     </div>

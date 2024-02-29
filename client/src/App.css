@@ -56,9 +56,11 @@ a{
   border-radius: 5px;
 }
 
-pre {
+.pre {
   padding: 0 10px;
   font-size: 15px;
+  height: 300px;
+  overflow-wrap: break-word;
 }
 .questions-main {
   display: flex;
@@ -268,7 +270,7 @@ pre {
     margin: 5px 0;
   }
   .output > div {
-    overflow: scroll;
+    overflow: auto;
     height: 100px;
   }
   .js-ide-main {

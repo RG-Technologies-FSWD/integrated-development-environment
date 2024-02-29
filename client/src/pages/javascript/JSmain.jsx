@@ -77,7 +77,7 @@ function JSmain() {
       console.log = originalConsoleLog;
 
       if (capturedLogs && capturedLogs.length > 0) {
-        setOutput(`=> Output : ${capturedLogs.join("\n")} \n[AT : ${new Date().toLocaleTimeString()}]`);
+        setOutput(()=>( <span> {'=>'} Output : <b>{capturedLogs.join("\n")}</b> <br/>[AT : {new Date().toLocaleTimeString()}]</span>));
       } else if (typeof result !== "undefined" && result !== null) {
         setOutput(`=> Output : ${result} \n[AT : ${new Date().toLocaleTimeString()}]`);
       } else {

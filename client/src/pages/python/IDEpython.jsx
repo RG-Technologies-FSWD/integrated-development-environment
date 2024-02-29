@@ -19,7 +19,7 @@ const IDEpython = ({ id, question, input, outPut, onBackClick }) => {
     setTimeout(() => {
       setOutput(
         (prevOutput) =>
-          `Output => ${prevOutput} [AT : ${new Date().toLocaleTimeString()}]`
+          <span>{'=> '}Output : <b>{prevOutput}</b> <br /> [AT : {new Date().toLocaleTimeString()}]</span>
       );
     }, 0);
   };
@@ -47,7 +47,7 @@ const IDEpython = ({ id, question, input, outPut, onBackClick }) => {
 
 export default IDEpython;
 
-export function DisplayQuestions({props}) {
+export function DisplayQuestions({ props }) {
   const { id, question, onBackClick, input, outPut } = props;
   return (
     <details style={{ padding: "10px" }}>
@@ -74,7 +74,7 @@ export function DisplayQuestions({props}) {
   );
 }
 
-export function DisplayOutput({props}) {
+export function DisplayOutput({ props }) {
   const { executeCode, setOutput, output } = props;
   return (
     <div className="ide-python-output">
@@ -107,7 +107,9 @@ export function DisplayOutput({props}) {
           </button>
         </div>
       </div>
-      <pre>{output}</pre>
+      <div style={{ overflow: "auto", height: "300px" }}>
+        <p className='pre'>{output}</p>
+      </div>
     </div>
   );
 }
