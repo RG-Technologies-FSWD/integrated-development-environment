@@ -77,13 +77,13 @@ function JSmain() {
       console.log = originalConsoleLog;
 
       if (capturedLogs && capturedLogs.length > 0) {
-        setOutput(`=> Output : ${capturedLogs.join("\n")}`);
+        setOutput(`=> Output : ${capturedLogs.join("\n")} \n[AT : ${new Date().toLocaleTimeString()}]`);
       } else if (typeof result !== "undefined" && result !== null) {
-        setOutput(`=> Output : ${result}`);
+        setOutput(`=> Output : ${result} \n[AT : ${new Date().toLocaleTimeString()}]`);
       } else {
         setOutput(
           <span style={{ color: "orange" }}>
-            Code execution result is undefined or null.
+            {`Code execution result is undefined or null. \n[AT : ${new Date().toLocaleTimeString()}]`}
           </span>
         );
       }
