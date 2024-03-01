@@ -1,5 +1,6 @@
 import React from "react";
 import { jwtDecode } from "jwt-decode";
+import logo from "./logo_blackbase.png"
 
 const Navbar = () => {
   const token = localStorage.getItem("rg-ide-token");
@@ -11,7 +12,7 @@ const Navbar = () => {
         <div className="container-fluid">
           <a className="navbar-brand" href="https://rg-tech.in/">
             <img
-              src="../assets/logo_blackbase.png"
+              src={logo}
               alt="logo"
               className="img-fluid"
               style={{ width: "90px", height: "60px" }}
