@@ -77,9 +77,17 @@ function JSmain() {
       console.log = originalConsoleLog;
 
       if (capturedLogs && capturedLogs.length > 0) {
-        setOutput(()=>( <span> {'=>'} Output : <b>{capturedLogs.join("\n")}</b> <br/>[AT : {new Date().toLocaleTimeString()}]</span>));
+        setOutput(() => (
+          <span>
+            {" "}
+            {"=>"} Output : <b>{capturedLogs.join("\n")}</b> <br />
+            [AT : {new Date().toLocaleTimeString()}]
+          </span>
+        ));
       } else if (typeof result !== "undefined" && result !== null) {
-        setOutput(`=> Output : ${result} \n[AT : ${new Date().toLocaleTimeString()}]`);
+        setOutput(
+          `=> Output : ${result} \n[AT : ${new Date().toLocaleTimeString()}]`
+        );
       } else {
         setOutput(
           <span style={{ color: "orange" }}>
@@ -89,11 +97,15 @@ function JSmain() {
       }
     } catch (error) {
       setOutput(() => (
-        <span style={{ color: "red" }}>Error: {error.message}m</span>
+        <span style={{ color: "red" }}>
+          Error : {error.message} ... <br />
+          [ AT : {new Date().toLocaleTimeString()} ]
+        </span>
       ));
     }
   };
 
+  
   // const handleSolveClick = (index) => {
   //   setSelectedQuestionIndex(index);
   //   setCode("");
@@ -116,19 +128,19 @@ function JSmain() {
           <QuestionList questions={q} onSolveClick={handleSolveClick} />
         </div>
       ) : */}
-      
-        <IDEjavascript
-          // id={q[selectedQuestionIndex].id}
-          // question={q[selectedQuestionIndex].question}
-          // input={q[selectedQuestionIndex].input}
-          // outPut={q[selectedQuestionIndex].output}
-          setOutput={setOutput}
-          code={code}
-          output={output}
-          onCodeChange={handleCodeChange}
-          onRunCode={handleRunCode}
-          onBackClick={handleBackClick}
-        />
+
+      <IDEjavascript
+        // id={q[selectedQuestionIndex].id}
+        // question={q[selectedQuestionIndex].question}
+        // input={q[selectedQuestionIndex].input}
+        // outPut={q[selectedQuestionIndex].output}
+        setOutput={setOutput}
+        code={code}
+        output={output}
+        onCodeChange={handleCodeChange}
+        onRunCode={handleRunCode}
+        onBackClick={handleBackClick}
+      />
       {/* )} */}
     </>
   );

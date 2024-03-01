@@ -1,4 +1,3 @@
-
 var message="Function Disabled...!!!!";
 
 function clickIE4(){

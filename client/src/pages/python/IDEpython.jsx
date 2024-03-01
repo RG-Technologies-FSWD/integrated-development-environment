@@ -10,19 +10,36 @@ const IDEpython = ({ id, question, input, outPut, onBackClick }) => {
 
   const executeCode = () => {
     setOutput("");
+  
     Sk.configure({
       output: (text) => setOutput((prevOutput) => prevOutput + text),
     });
+  
+
     Sk.misceval.asyncToPromise(() =>
       Sk.importMainWithBody("<stdin>", false, code, true)
-    );
-    setTimeout(() => {
-      setOutput(
-        (prevOutput) =>
-          <span>{'=> '}Output : <b>{prevOutput}</b> <br /> [AT : {new Date().toLocaleTimeString()}]</span>
-      );
-    }, 0);
+    )
+      .then(() => {
+        setOutput(
+          (prevOutput) => (
+            <span>
+              {'=> '}Output : <b>{prevOutput}</b> <br /> [AT : {new Date().toLocaleTimeString()}]
+            </span>
+          )
+        );
+      })
+      .catch((error) => {
+        console.error("Error executing Python code:", error);
+        setOutput(
+          (prevOutput) => (
+            <span style={{color:"red"}}>
+              {'=> '}  {error.toString()} <br /> [AT : {new Date().toLocaleTimeString()}]
+            </span>
+          )
+        );
+      });
   };
+  
 
   return (
     <>

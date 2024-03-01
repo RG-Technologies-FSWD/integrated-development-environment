@@ -29,7 +29,7 @@ const IDEjavascript = ({
         <div className="js-ide-input">
           <MonacoEditor
             width="100%"
-            height={"400px"}
+            height={"452px"}
             language="javascript"
             theme="hc-black"
             value={code}
