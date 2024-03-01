@@ -1,6 +1,5 @@
 {
   "name": "rg-technologies-ide",
-  "homepage": "https://RG-Technologies-FSWD.github.io/integrated-development-environment",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +11,7 @@
     "axios": "^1.6.7",
     "framer-motion": "^11.0.6",
     "jwt-decode": "^4.0.0",
-    "monaco-editor": "^0.46.0",
+   
     "monaco-editor-webpack-plugin": "^7.1.0",
     "path-browserify": "^1.0.1",
     "react": "^18.2.0",
@@ -27,8 +26,6 @@
     "webpack": "^5.90.3"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
