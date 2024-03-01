@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/integrated-development-environment/static/css/main.96e82280.css",
+    "main.js": "/integrated-development-environment/static/js/main.fbdb1d86.js",
+    "index.html": "/integrated-development-environment/index.html",
+    "main.96e82280.css.map": "/integrated-development-environment/static/css/main.96e82280.css.map",
+    "main.fbdb1d86.js.map": "/integrated-development-environment/static/js/main.fbdb1d86.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96e82280.css",
+    "static/js/main.fbdb1d86.js"
+  ]
+}
